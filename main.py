@@ -519,7 +519,7 @@ def main(event, context):
         global client
         client = login.login(user['username'],user['password'],user['appId'])
         if client != False:
-            getIntegral()
+            #getIntegral()
             daySign_task(user['username'])
             dayOneG_Task()
             luckDraw_task()
