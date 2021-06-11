@@ -261,8 +261,9 @@ def pointsLottery_task(n):
         #每日首次免费
         oneFree = client.post('https://m.client.10010.com/dailylottery/static/integral/choujiang?usernumberofjsp=' + numjsp)
         oneFree.encoding = 'utf-8'
-        res1 = oneFree.json()
-        logging.info("【积分抽奖】: " + res1['RspMsg'] + ' x免费')
+        # res1 = oneFree.json()
+        # logging.info("【积分抽奖】: " + res1['RspMsg'] + ' x免费')
+        logging.info("【积分抽奖】: " + str(oneFree))
         #如果用户未设置此值，将不会自动抽奖
         #预防用户输入30以上，造成不必要的抽奖操作
         num = min(30,int(n))
