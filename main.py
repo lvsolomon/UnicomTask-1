@@ -534,7 +534,8 @@ def main(event, context):
                 openBox_task()
             collectFlow_task()
             woTree_task()
-            actionFlow(user['username'])
+            # 激活即将过去的流量包
+            # actionFlow(user['username'])
         if ('email' in user) :
             notify.sendEmail(user['email'])
         if ('dingtalkWebhook' in user) :
