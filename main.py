@@ -324,10 +324,12 @@ def dayOneG_Task():
         client.post('https://act.10010.com/SigninApp/doTask/getTaskInfo')
         res1 = getTaskInfo.json()
         res2 = getPrize.json()
-        if(res1['data']['taskInfo']['status'] == '1'):
-            logging.info('【1G流量日包】: ' + res2['data']['statusDesc'])
-        else:
-            logging.info('【1G流量日包】: ' + res1['data']['taskInfo']['btn'])
+        # if(res1['data']['taskInfo']['status'] == '1'):
+            # logging.info('【1G流量日包】: ' + res2['data']['statusDesc'])
+        # else:
+            #logging.info('【1G流量日包】: ' + res1['data']['taskInfo']['btn'])
+        logging.info('【1G流量日包】: ' + getTaskInfo)
+        logging.info('【1G流量日包】: ' + getPrize)
         time.sleep(1)
     except Exception as e:
         print(traceback.format_exc())
