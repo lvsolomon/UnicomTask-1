@@ -328,8 +328,8 @@ def dayOneG_Task():
             # logging.info('【1G流量日包】: ' + res2['data']['statusDesc'])
         # else:
             #logging.info('【1G流量日包】: ' + res1['data']['taskInfo']['btn'])
-        logging.info('【1G流量日包】: ' + getTaskInfo)
-        logging.info('【1G流量日包】: ' + getPrize)
+        logging.info('【1G流量日包】: ' + str(getTaskInfo))
+        logging.info('【1G流量日包】: ' + str(getPrize))
         time.sleep(1)
     except Exception as e:
         print(traceback.format_exc())
