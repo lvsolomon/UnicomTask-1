@@ -27,12 +27,13 @@ def woTree_task():
         for flow in flowList:
             takeFlow = client.get('https://m.client.10010.com/mactivity/flowData/takeFlow.htm?flowId=' + flow['id'])
             takeFlow.encoding='utf-8'
-            res1 = takeFlow.json()
-            if res1['code'] == '0000':
-                logging.info('【沃之树-领流量】: 4M流量 x' + str(num))
-            else:
-                logging.info('【沃之树-领流量】: 已领取过 x' + str(num))
+            #res1 = takeFlow.json()
+            #if res1['code'] == '0000':
+            #    logging.info('【沃之树-领流量】: 4M流量 x' + str(num))
+            #else:
+            #    logging.info('【沃之树-领流量】: 已领取过 x' + str(num)
             #等待1秒钟
+            logging.info('【沃之树-领流量】: ' + str(takeFlow))
             time.sleep(1)
             num = num + 1
         client.post('https://m.client.10010.com/mactivity/arbordayJson/getChanceByIndex.htm?index=0')
