@@ -536,7 +536,8 @@ def main(event, context):
             if check():
                 gameCenterSign_Task(user['username'])
                 openBox_task()
-            collectFlow_task()
+            # 异常
+            #collectFlow_task()
             woTree_task()
             # 激活即将过去的流量包
             # actionFlow(user['username'])
